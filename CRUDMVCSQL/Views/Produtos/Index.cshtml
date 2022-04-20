@@ -1,0 +1,44 @@
+﻿@model IEnumerable<CRUDMVCSQL.Models.Produto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Consulta de Produtos Cadastrados</h1>
+
+<p>
+    <a asp-action="Create">Cadastre um novo</a>
+</p>
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+              <button type="button" class="btn btn-success"><a asp-action="Edit" asp-route-id="@item.Id">Editar</a>  </button>
+              <button type="button" class="btn btn btn-warning"><a asp-action="Details" asp-route-id="@item.Id">Detalhes</a>  </button>
+              <button type="button" class="btn btn btn-danger"> <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a> </button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+<p>
+    <a asp-action="Inicial">Voltar Tela Inicial</a>
+</p>
