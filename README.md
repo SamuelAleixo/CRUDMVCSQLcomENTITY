@@ -1,3 +1,3 @@
 # CRUDMVCSQLcomENTITY
 
-Projeto Crud Web com framework ENTITY para desevolvimento e com SQL SERVER.
+Projeto Crud Web com framework ENTITY para desenvolvimento e com SQL SERVER.
